@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root 'get_tweets#index'
+  get 'collect_tweet', to: 'get_tweets#collect_tweet'
+
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

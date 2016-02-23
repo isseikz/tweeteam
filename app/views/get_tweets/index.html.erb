@@ -1,0 +1,22 @@
+<h1>GetTweets#index</h1>
+<p>Find me in app/views/get_tweets/index.html.erb</p>
+<%= link_to '最新のツイートを取得', collect_tweet_path %>
+<table>
+    <tr>
+        <td>ユーザーid</td>
+        <td>ツイートid</td>
+        <td>作成日時</td>
+        <td>内容</td>
+        
+    </tr>
+<% @tweets.order('date desc').each do |tweet| %>
+    <tr>
+        <td><%= tweet.user_id %></td>
+        <td><%= tweet.tweet_id %></td>
+        <td><%= tweet.date %></td>
+        <td><%= tweet.content %></td>
+        
+    </tr>
+    
+<% end %>
+</table>

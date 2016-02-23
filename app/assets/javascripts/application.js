@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require cosmo/loader
+//= require cosmo/bootswatch
+//= require bootstrap-sprockets
